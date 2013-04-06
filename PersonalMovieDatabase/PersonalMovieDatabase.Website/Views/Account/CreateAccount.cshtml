@@ -1,0 +1,38 @@
+﻿@model PersonalMovieDatabase.Website.Models.AccountModel
+
+@{
+    ViewBag.Title = "CreateAccount";
+}
+
+<h2>CreateAccount</h2>
+
+<div>
+    @Html.LabelFor(m => m.Username)
+    @Html.TextBoxFor(m => m.Username)
+    @Html.ValidationMessageFor(m => m.Username)
+</div>
+<div>
+    @Html.LabelFor(m=>m.EmailAddress)
+    @Html.TextBoxFor(m => m.EmailAddress)
+    @Html.ValidationMessageFor(m => m.EmailAddress)
+</div>
+<div>
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName)
+    @Html.ValidationMessageFor(m => m.FirstName)
+</div>
+<div>
+    @Html.LabelFor(m => m.Surname)
+    @Html.TextBoxFor(m => m.Surname)
+    @Html.ValidationMessageFor(m => m.Surname)
+</div>
+<div>
+    @Html.LabelFor(m => m.Password)
+    @Html.TextBoxFor(m => m.Password)
+    @Html.ValidationMessageFor(m => m.Password)
+</div>
+<div>
+    @Html.LabelFor(m => m.ReenterPassword)
+    @Html.TextBoxFor(m => m.ReenterPassword)
+    @Html.ValidationMessageFor(m => m.ReenterPassword)
+</div>
