@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Ninject;
+using PersonalMovieDatabase.Website.App_Start;
 
 namespace PersonalMovieDatabase.Website
 {
@@ -14,6 +14,10 @@ namespace PersonalMovieDatabase.Website
 
     public class MvcApplication : System.Web.HttpApplication
     {
+        //Why
+        [Inject]
+        public IKernel Kernel { get; set; }
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -22,6 +26,11 @@ namespace PersonalMovieDatabase.Website
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        protected void InstantiateKernel(object sender, EventArgs e)
+        {
+            HttpContext.Current.Items[HttpContextKeys.Kernel] = Kernel;
         }
     }
 }

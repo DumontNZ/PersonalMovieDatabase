@@ -1,20 +1,27 @@
 ﻿using System;
+using System.Collections.Generic;
+using PersonalMovieDatabase.Domain;
 
 namespace PersonalMovieDatabase.Repository
 {
     public class UsersRepository : IUsersRepository
     {
-        public void GetAllUsers()
+        public Users CreateUser(Users user)
         {
             throw new NotImplementedException();
         }
 
-        public void GetUser(int userId)
+        public IEnumerable<Users> GetAllUsers()
         {
             throw new NotImplementedException();
         }
 
-        public void GetUser(string username)
+        public Users GetUser(int userId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Users GetUser(string username)
         {
             throw new NotImplementedException();
         }
