@@ -13,5 +13,10 @@ namespace PersonalMovieDatabase.Common.Configuration
         {
             get { return GetConfigurationValues(ConfigKeys.SomethingImportant); }
         }
+
+        public string SqlConnectionString
+        {
+            get { return GetConfigurationValues(ConfigKeys.SqlConnection); }
+        }
     }
 }

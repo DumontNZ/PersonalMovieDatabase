@@ -3,6 +3,7 @@
     public class ConfigKeys
     {
         public const string SomethingImportant = "SomethingImportant";
+        public const string SqlConnection = "MySqlConnectionString";
 
     }
 }

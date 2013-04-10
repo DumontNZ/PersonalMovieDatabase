@@ -4,5 +4,6 @@
     {
 
         string SomethingImportant { get; }
+        string SqlConnectionString { get;  }
     }
 }
