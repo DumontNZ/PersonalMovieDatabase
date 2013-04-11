@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-using PersonalMovieDatabase.Common.Configuration;
+using MySql.Data.MySqlClient;
 using PersonalMovieDatabase.Domain;
 using Dapper;
 
@@ -10,11 +8,11 @@ namespace PersonalMovieDatabase.Repository
 {
     public class UsersRepository : IUsersRepository
     {
-        private readonly IConfig _config;
+       
 
-        public UsersRepository(IConfig config)
+        public UsersRepository()
         {
-            _config = config;
+            
         }
 
         public Users CreateUser(Users user)
@@ -28,18 +26,16 @@ namespace PersonalMovieDatabase.Repository
 
         public IEnumerable<Users> GetAllUsers()
         {
-            //using (var sqlConnection = new SqlConnection(_config.SqlConnectionString))
-            //{
-            //    sqlConnection.Open();
+            var connectionString =
+                 System.Web.Configuration.WebConfigurationManager.ConnectionStrings["MySqlConnectionString"].ConnectionString;
 
-            //    IEnumerable<Users> users = sqlConnection.("Select * from Products");
+            using(var sqlConnection = new MySqlConnection(connectionString))
+            {
+                sqlConnection.Open();
+                IEnumerable<Users> users = sqlConnection.Query<Users>("Select * from Users");
 
-            //    foreach (Product product in products)
-            //    {
-            //        ObjectDumper.Write(product);
-            //    }
-            //    sqlConnection.Close();
-            //}
+                return users;
+            }
         }
 
         public Users GetUser(int userId)

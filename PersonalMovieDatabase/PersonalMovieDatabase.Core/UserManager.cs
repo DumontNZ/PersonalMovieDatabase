@@ -1,4 +1,6 @@
-﻿using Ninject.Extensions.Logging;
+﻿using System.Collections.Generic;
+using Ninject.Extensions.Logging;
+using PersonalMovieDatabase.Domain;
 using PersonalMovieDatabase.Repository;
 
 namespace PersonalMovieDatabase.Core
@@ -17,6 +19,7 @@ namespace PersonalMovieDatabase.Core
         public void Testin()
         {
             _logger.Debug("Inside Manager");
+            IEnumerable<Users> users = _usersRepository.GetAllUsers();
             throw new System.NotImplementedException();
         }
     }
