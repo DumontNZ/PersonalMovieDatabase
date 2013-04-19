@@ -11,8 +11,8 @@ namespace PersonalMovieDatabase.Repository.Tests
         [Test]
         public void TestDatabaseConnection()
         {
-            UsersRepository userRepository = new UsersRepository();
-            IEnumerable<Users> users = userRepository.GetAllUsers();
+            UserRepository userRepository = new UserRepository();
+            IEnumerable<User> users = userRepository.GetAllUsers();
 
             Assert.IsTrue(users.Any());
         }

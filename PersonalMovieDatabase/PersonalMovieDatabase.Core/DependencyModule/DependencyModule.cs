@@ -7,7 +7,7 @@ namespace PersonalMovieDatabase.Core.DependencyModule
     {
         public override void Load()
         {
-            Bind<IUsersRepository>().To<UsersRepository>();
+            Bind<IUserRepository>().To<UserRepository>();
         }
     }
 }

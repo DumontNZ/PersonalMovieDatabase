@@ -6,16 +6,16 @@ using Dapper;
 
 namespace PersonalMovieDatabase.Repository
 {
-    public class UsersRepository : IUsersRepository
+    public class UserRepository : IUserRepository
     {
        
 
-        public UsersRepository()
+        public UserRepository()
         {
             
         }
 
-        public Users CreateUser(Users user)
+        public User CreateUser(User user)
         {
             //using (MySqlConnection dbConn = new MySqlConnection(ConfigurationManager.ConnectionStrings["connstring"].ConnectionString))
             //{
@@ -24,7 +24,7 @@ namespace PersonalMovieDatabase.Repository
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Users> GetAllUsers()
+        public IEnumerable<User> GetAllUsers()
         {
             var connectionString =
                  System.Web.Configuration.WebConfigurationManager.ConnectionStrings["MySqlConnectionString"].ConnectionString;
@@ -32,18 +32,18 @@ namespace PersonalMovieDatabase.Repository
             using(var sqlConnection = new MySqlConnection(connectionString))
             {
                 sqlConnection.Open();
-                IEnumerable<Users> users = sqlConnection.Query<Users>("Select * from Users");
+                IEnumerable<User> users = sqlConnection.Query<User>("Select * from User");
 
                 return users;
             }
         }
 
-        public Users GetUser(int userId)
+        public User GetUser(int userId)
         {
             throw new NotImplementedException();
         }
 
-        public Users GetUser(string username)
+        public User GetUser(string username)
         {
             throw new NotImplementedException();
         }

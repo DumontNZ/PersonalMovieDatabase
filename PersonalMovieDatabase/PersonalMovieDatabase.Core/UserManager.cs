@@ -7,19 +7,19 @@ namespace PersonalMovieDatabase.Core
 {
     public class UserManager : IUserManager
     {
-        private readonly IUsersRepository _usersRepository;
+        private readonly IUserRepository _userRepository;
         private readonly ILogger _logger;
 
-        public UserManager(IUsersRepository usersRepository, ILogger logger)
+        public UserManager(IUserRepository userRepository, ILogger logger)
         {
-            _usersRepository = usersRepository;
+            _userRepository = userRepository;
             _logger = logger;
         }
 
         public void Testin()
         {
             _logger.Debug("Inside Manager");
-            IEnumerable<Users> users = _usersRepository.GetAllUsers();
+            IEnumerable<User> users = _userRepository.GetAllUsers();
             throw new System.NotImplementedException();
         }
     }
