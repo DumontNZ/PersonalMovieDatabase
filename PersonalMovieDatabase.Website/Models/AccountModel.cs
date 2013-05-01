@@ -17,7 +17,7 @@ namespace PersonalMovieDatabase.Website.Models
 
         [Required]
         [LocalisedDisplayName("FirstName")]
-        public string FirstName { get; set; }
+        public string FdfdirstName { get; set; }
 
         [Required]
         [LocalisedDisplayName("Surname")]
