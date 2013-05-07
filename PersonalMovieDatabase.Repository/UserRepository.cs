@@ -1,18 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using MySql.Data.MySqlClient;
-using PersonalMovieDatabase.Domain;
+﻿using System.Linq;
 using Dapper;
+using System;
+using MySql.Data.MySqlClient;
+using System.Collections.Generic;
+
+using PersonalMovieDatabase.Domain;
 
 namespace PersonalMovieDatabase.Repository
 {
     public class UserRepository : IUserRepository
     {
-       
+        private readonly string _connectionString ; 
 
         public UserRepository()
         {
-            
+            _connectionString = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["MySqlConnectionString"].ConnectionString;
         }
 
         public User CreateUser(User user)
@@ -26,13 +28,10 @@ namespace PersonalMovieDatabase.Repository
 
         public IEnumerable<User> GetAllUsers()
         {
-            var connectionString =
-                 System.Web.Configuration.WebConfigurationManager.ConnectionStrings["MySqlConnectionString"].ConnectionString;
-
-            using(var sqlConnection = new MySqlConnection(connectionString))
+            using (var sqlConnection = new MySqlConnection(_connectionString))
             {
                 sqlConnection.Open();
-                IEnumerable<User> users = sqlConnection.Query<User>("Select * from User");
+                IEnumerable<User> users = sqlConnection.Query<User>("Select * from User where UserId = @UserId", new{UserId=2}).ToList();
 
                 return users;
             }

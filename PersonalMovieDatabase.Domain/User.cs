@@ -4,12 +4,14 @@ namespace PersonalMovieDatabase.Domain
 {
     public class User
     {
-        public string Username { get; set; }
+        public int UserId { get; set; }
+        public string UserName { get; set; }
         public string Email { get; set; }
         public string FirstName { get; set; }
         public string Surname { get; set; }
-        public string Passssssword { get; set; }
-        public DateTime DateCreateUTC { get; set; }
-        public DateTime DateDeleteUTC { get; set; }
+        public string Password { get; set; }
+        public string Country { get; set; }
+        public DateTime CreatedOnDateUTC { get; set; }
+        public DateTime DeletedOnDateUTC { get; set; }
     }
 }

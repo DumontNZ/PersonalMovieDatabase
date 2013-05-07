@@ -9,10 +9,10 @@ INSERT INTO `pmdb`.`user`
 )
 VALUES
 (
-"DumontNZ",
-"joel_tennant@hotmail.com",
-"Joel",
-"Tennant",
+"SecondUsr",
+"garyoak@something.com",
+"Gary",
+"Oak",
 "Password1",
 "New Zealand"
 );
