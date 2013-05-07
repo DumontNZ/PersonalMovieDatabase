@@ -8,7 +8,7 @@ namespace PersonalMovieDatabase.Domain
         public string Email { get; set; }
         public string FirstName { get; set; }
         public string Surname { get; set; }
-        public string Password { get; set; }
+        public string Passssssword { get; set; }
         public DateTime DateCreateUTC { get; set; }
         public DateTime DateDeleteUTC { get; set; }
     }

@@ -1,19 +1,19 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Website", "PersonalMovieDatabase.Website\PersonalMovieDatabase.Website.csproj", "{4CCF87B0-F9EC-4365-A079-04851CA66A66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Common", "PersonalMovieDatabase.Common\PersonalMovieDatabase.Common.csproj", "{882D4904-E51C-4AC9-AF25-BED9719AD7F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Repository", "PersonalMovieDatabase.Repository\PersonalMovieDatabase.Repository.csproj", "{F93E4B08-5FA5-4E5C-AEFA-485A275D6CB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Db", "PersonalMovieDatabase.Db\PersonalMovieDatabase.Db.csproj", "{86DB9041-A3BA-4475-B8E9-B190B7DD44AB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Domain", "PersonalMovieDatabase.Domain\PersonalMovieDatabase.Domain.csproj", "{22F8DE81-296B-4B36-8808-268E701092F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Core", "PersonalMovieDatabase.Core\PersonalMovieDatabase.Core.csproj", "{D1F5364F-5E7D-4F63-A149-26B23D738215}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Repository.Tests", "PersonalMovieDatabase.Repository.Tests\PersonalMovieDatabase.Repository.Tests.csproj", "{4356239F-B862-417D-BF18-241B10690889}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Database", "PersonalMovieDatabase.Database\PersonalMovieDatabase.Database.csproj", "{8444EE54-BC5A-4BB1-B285-D383E798EC94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		{F93E4B08-5FA5-4E5C-AEFA-485A275D6CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F93E4B08-5FA5-4E5C-AEFA-485A275D6CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F93E4B08-5FA5-4E5C-AEFA-485A275D6CB7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86DB9041-A3BA-4475-B8E9-B190B7DD44AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86DB9041-A3BA-4475-B8E9-B190B7DD44AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86DB9041-A3BA-4475-B8E9-B190B7DD44AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86DB9041-A3BA-4475-B8E9-B190B7DD44AB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{22F8DE81-296B-4B36-8808-268E701092F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22F8DE81-296B-4B36-8808-268E701092F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22F8DE81-296B-4B36-8808-268E701092F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -49,6 +45,10 @@ Global
 		{4356239F-B862-417D-BF18-241B10690889}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4356239F-B862-417D-BF18-241B10690889}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4356239F-B862-417D-BF18-241B10690889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8444EE54-BC5A-4BB1-B285-D383E798EC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8444EE54-BC5A-4BB1-B285-D383E798EC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8444EE54-BC5A-4BB1-B285-D383E798EC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8444EE54-BC5A-4BB1-B285-D383E798EC94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
