@@ -6,7 +6,7 @@ FirstName varchar(50) not null,
 Surname varchar(50) not null,
 Password varchar(200) not null,
 Country varchar (50) not null,
-CreatedOnDateUTC TIMESTAMP(6),
+CreatedOnDateUTC TIMESTAMP,
 DeleteOnDateUTC date,
 PRIMARY KEY (UserId))
 ;
