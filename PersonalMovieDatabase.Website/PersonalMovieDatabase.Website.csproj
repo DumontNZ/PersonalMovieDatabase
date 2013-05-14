@@ -16,6 +16,10 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -152,7 +156,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HttpContextKeys.cs" />
-    <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Models\LogOnModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -258,6 +262,10 @@
     <ProjectReference Include="..\PersonalMovieDatabase.Core\PersonalMovieDatabase.Core.csproj">
       <Project>{D1F5364F-5E7D-4F63-A149-26B23D738215}</Project>
       <Name>PersonalMovieDatabase.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PersonalMovieDatabase.Domain\PersonalMovieDatabase.Domain.csproj">
+      <Project>{22f8de81-296b-4b36-8808-268e701092f6}</Project>
+      <Name>PersonalMovieDatabase.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

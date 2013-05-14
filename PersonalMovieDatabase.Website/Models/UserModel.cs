@@ -1,10 +1,9 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using PersonalMovieDatabase.Website.Attributes;
 
 namespace PersonalMovieDatabase.Website.Models
 {
-    public class AccountModel
+    public class UserModel
     {
         [Required]
         [LocalisedDisplayName("Username")]
@@ -17,7 +16,7 @@ namespace PersonalMovieDatabase.Website.Models
 
         [Required]
         [LocalisedDisplayName("FirstName")]
-        public string FdfdirstName { get; set; }
+        public string FirstName { get; set; }
 
         [Required]
         [LocalisedDisplayName("Surname")]
@@ -32,5 +31,9 @@ namespace PersonalMovieDatabase.Website.Models
         [DataType(DataType.Password)]
         [LocalisedDisplayName("ReenterPassword")]
         public string ReenterPassword { get; set; }
+
+        [Required]
+        [LocalisedDisplayName("Country")]
+        public string Country { get; set; }
     }
 }

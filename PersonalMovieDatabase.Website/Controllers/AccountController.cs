@@ -2,7 +2,10 @@
 using System.Web.Mvc;
 using Ninject.Extensions.Logging;
 using PersonalMovieDatabase.Common.Configuration;
+using PersonalMovieDatabase.Common.Resources;
 using PersonalMovieDatabase.Core;
+using PersonalMovieDatabase.Domain;
+using PersonalMovieDatabase.Website.Models;
 
 namespace PersonalMovieDatabase.Website.Controllers
 {
@@ -21,19 +24,60 @@ namespace PersonalMovieDatabase.Website.Controllers
 
         public ActionResult Logon()
         {
-            _logger.Info("Inside logon");
-            string something = _config.SomethingImportant; 
-            _userManager.Testin();
+
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Logon(UserModel userModel)
+        {
+
+
+            throw new NotImplementedException();
         }
 
         public ActionResult CreateAccount()
         {
 
 
-            throw new NotImplementedException();
-            //return View(); 
+            return View();
         }
+
+        [HttpPost]
+        public ActionResult CreateAccount(UserModel userModel)
+        {
+            if (ModelState.IsValid)
+            {
+                if (!userModel.Password.Equals(userModel.ReenterPassword))
+                {
+                    ModelState.AddModelError("Password", ErrorMessages.PasswordsDoNotMatch);
+                }
+
+                //if (_userManager.GetUser("Username" != null))
+                //{
+                //    ModelState.AddModelError("Username", ErrorMessages.UsernameInUse);
+                //}
+
+                if (ModelState.IsValid)
+                {
+                    _userManager.CreateUser(new User
+                         {
+                             UserName = userModel.Username,
+                             FirstName = userModel.FirstName,
+                             Surname = userModel.Surname,
+                             Country = userModel.Country,
+                             Email = userModel.EmailAddress,
+                             Password = userModel.Password,
+                         });
+
+                    return View("Logon");
+
+                }
+            }
+
+            return View(userModel);
+        }
+
 
     }
 }

@@ -4,16 +4,22 @@ namespace PersonalMovieDatabase.Common.Configuration
 {
     public class Config : IConfig
     {
-        private string GetConfigurationValues(string key)
+        /// <summary>
+        /// Gets the configuration values.
+        /// </summary>
+        /// <param name="key">The key.</param>
+        /// <returns></returns>
+        private static string GetConfigurationValues(string key)
         {
             return ConfigurationManager.AppSettings[key];
         }
 
-        public string SomethingImportant
-        {
-            get { return GetConfigurationValues(ConfigKeys.SomethingImportant); }
-        }
-
+        /// <summary>
+        /// Gets the SQL connection string.
+        /// </summary>
+        /// <value>
+        /// The SQL connection string.
+        /// </value>
         public string SqlConnectionString
         {
             get { return GetConfigurationValues(ConfigKeys.SqlConnection); }

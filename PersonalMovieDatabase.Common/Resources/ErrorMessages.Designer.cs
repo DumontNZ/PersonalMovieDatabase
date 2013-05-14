@@ -68,5 +68,23 @@ namespace PersonalMovieDatabase.Common.Resources {
                 return ResourceManager.GetString("InvalidEmailAddress", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Passwords do not match.
+        /// </summary>
+        public static string PasswordsDoNotMatch {
+            get {
+                return ResourceManager.GetString("PasswordsDoNotMatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This username is already in use please choose another.
+        /// </summary>
+        public static string UsernameInUse {
+            get {
+                return ResourceManager.GetString("UsernameInUse", resourceCulture);
+            }
+        }
     }
 }
