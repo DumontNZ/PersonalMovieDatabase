@@ -1,7 +1,8 @@
-﻿using System.Linq;
-using System.Transactions;
+﻿using System;
+using System.Linq;
 using NUnit.Framework;
 using System.Collections.Generic;
+using PersonalMovieDatabase.Common.Cryptography;
 using PersonalMovieDatabase.Domain; 
 
 namespace PersonalMovieDatabase.Repository.Tests
@@ -9,6 +10,12 @@ namespace PersonalMovieDatabase.Repository.Tests
     [TestFixture]
     public class UserRepositoryTest : TestBase
     {
+        private readonly ICryptography _cryptography;
+        private const string Password = "Password";
+        public UserRepositoryTest()
+        {
+            _cryptography = new Cryptography();
+        }
 
         [Test]
         public void RetrieveAllUsersSuccessful()
@@ -23,15 +30,16 @@ namespace PersonalMovieDatabase.Repository.Tests
         public void SuccessfullyCreateUser()
         {
             var userRepository = new UserRepository();
-
+            string passwordSalt = _cryptography.GeneratePasswordSalt(); 
             var user = new User
                 {
-                    UserName = "NewUser",
+                    UserName = Guid.NewGuid().ToString(),
                     Email = "NewUser@NewUser.com",
                     FirstName = "Frank",
                     Surname = "TheTank",
                     Country = "Australia",
-                    Password = "Password1"
+                    PasswordSalt = passwordSalt, 
+                    Password = _cryptography.HashPassword(Password, passwordSalt)
                 };
 
             var isSucessful = userRepository.CreateUser(user);

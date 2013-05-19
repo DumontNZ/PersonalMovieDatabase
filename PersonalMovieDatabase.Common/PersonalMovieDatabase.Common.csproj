@@ -43,6 +43,9 @@
     <Reference Include="Ninject.Extensions.Logging.Log4Net">
       <HintPath>..\packages\Ninject.Extensions.Logging.Log4net.3.0.1.0\lib\net40\Ninject.Extensions.Logging.Log4Net.dll</HintPath>
     </Reference>
+    <Reference Include="SimpleCrypto">
+      <HintPath>..\packages\SimpleCrypto.0.3.28.24\lib\SimpleCrypto.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -56,6 +59,8 @@
     <Compile Include="Configuration\Config.cs" />
     <Compile Include="Configuration\ConfigKeys.cs" />
     <Compile Include="Configuration\IConfig.cs" />
+    <Compile Include="Cryptography\Cryptography.cs" />
+    <Compile Include="Cryptography\ICryptography.cs" />
     <Compile Include="Extensions\String\FormatWith.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\DisplayNames.Designer.cs">

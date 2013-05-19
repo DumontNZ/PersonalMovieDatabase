@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Repos
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Database", "PersonalMovieDatabase.Database\PersonalMovieDatabase.Database.csproj", "{8444EE54-BC5A-4BB1-B285-D383E798EC94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalMovieDatabase.Common.Tests", "PersonalMovieDatabase.Common.Tests\PersonalMovieDatabase.Common.Tests.csproj", "{621EA822-2626-494C-A2E8-E707D1D2F991}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EAA13FFC-482C-44C5-8513-F56E39A3A6D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,8 +53,16 @@ Global
 		{8444EE54-BC5A-4BB1-B285-D383E798EC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8444EE54-BC5A-4BB1-B285-D383E798EC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8444EE54-BC5A-4BB1-B285-D383E798EC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{621EA822-2626-494C-A2E8-E707D1D2F991}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621EA822-2626-494C-A2E8-E707D1D2F991}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621EA822-2626-494C-A2E8-E707D1D2F991}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621EA822-2626-494C-A2E8-E707D1D2F991}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{621EA822-2626-494C-A2E8-E707D1D2F991} = {EAA13FFC-482C-44C5-8513-F56E39A3A6D2}
+		{4356239F-B862-417D-BF18-241B10690889} = {EAA13FFC-482C-44C5-8513-F56E39A3A6D2}
 	EndGlobalSection
 EndGlobal

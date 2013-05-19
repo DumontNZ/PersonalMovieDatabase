@@ -29,7 +29,7 @@ namespace PersonalMovieDatabase.Core
         public int CreateUser(User user)
         {
             _logger.Debug("Inside Manager");
-
+            _userRepository.CreateUser(user); 
             return _userRepository.CreateUser(user); 
         }
 

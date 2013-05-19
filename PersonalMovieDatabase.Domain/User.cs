@@ -13,5 +13,8 @@ namespace PersonalMovieDatabase.Domain
         public string Country { get; set; }
         public DateTime CreatedOnDateUTC { get; set; }
         public DateTime DeletedOnDateUTC { get; set; }
+        public string PasswordSalt { get; set;  }
+        public string Token { get; set; }
+        public DateTime TokenExpiry { get; set; }
     }
 }

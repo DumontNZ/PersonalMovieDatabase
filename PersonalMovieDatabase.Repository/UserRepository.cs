@@ -32,7 +32,7 @@ namespace PersonalMovieDatabase.Repository
                 try
                 {
                     var succcessful = sqlConnection.Execute
-                   ("Insert into user(UserName, FirstName, Surname, Email, Password, Country) values(@UserName, @FirstName, @Surname, @Email, @Password, @Country)", user);
+                   ("Insert into user(UserName, FirstName, Surname, Email, PasswordSalt, Password, Country) values(@UserName, @FirstName, @Surname, @Email, @PasswordSalt, @Password, @Country)", user);
 
                     return succcessful;
                 }

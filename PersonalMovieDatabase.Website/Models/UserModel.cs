@@ -9,8 +9,8 @@ namespace PersonalMovieDatabase.Website.Models
         [LocalisedDisplayName("Username")]
         public string Username { get; set; }
 
+       // [EmailAddress]
         [Required]
-        [EmailAddress]
         [LocalisedDisplayName("EmailAddress")]
         public string EmailAddress { get; set; }
 
@@ -30,6 +30,7 @@ namespace PersonalMovieDatabase.Website.Models
         [Required]
         [DataType(DataType.Password)]
         [LocalisedDisplayName("ReenterPassword")]
+        [PasswordCompare("Password")]
         public string ReenterPassword { get; set; }
 
         [Required]
